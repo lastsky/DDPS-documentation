@@ -1,0 +1,19 @@
+-- FOR POSTGRESQL
+drop database netflow;
+drop user admin;
+drop user flowuser;
+
+create user admin superuser nocreatedb replication password 'nFdb0Jn6Kw8o';
+--create user flowuser nosuperuser nocreatedb noreplication password 'Gbr(Ff)wCJOF';
+CREATE ROLE flowuser;
+ALTER ROLE flowuser WITH NOSUPERUSER INHERIT NOCREATEROLE NOCREATEDB LOGIN NOREPLICATION PASSWORD 'Gbr(Ff)wCJOF';
+
+create database netflow owner admin;
+
+--      netflow=# grant select, insert, update, delete on administrators, customernetworkobjects, customernetworks, customers, fastnetmoninstances, flowspecrules, globalnetworkobjectcidrs, globalnetworkobjects, globalserviceobjects, networkrights to flowuser;
+
+\c netflow
+
+--
+-- install pgcrypto (postgres)
+create extension pgcrypto;

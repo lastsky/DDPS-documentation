@@ -1,0 +1,8 @@
+:
+
+for C in avenir-white.css foghorn.css markdown-alt.css markdown.css markdown1.css markdown10.css markdown2.css markdown3.css markdown4.css markdown5.css markdown6.css markdown7.css markdown8.css markdown9.css screen.css swiss.css 
+do
+
+wget --no-check-certificate https://jasonm23.github.io/markdown-css-themes/$C
+
+done
