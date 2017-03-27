@@ -25,6 +25,10 @@ edge on the routers thereby mitigating the attack. Rules are later withdrawn.
 
 ![](docs/assets/img/workflow.png)
 
+<!--
+	the image is made in Draw.io (chrome app), the src is in media/docs/workflow.xml
+-->
+
 The rules has to match the BGP community we are responsible for: it has to match
 our network only. The system has been designed to be do that from the entrance point
 to the exit point: customers can only make rules for their own network which is
