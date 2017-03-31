@@ -11,7 +11,7 @@ Access with [ssh keys](https://www.digitalocean.com/community/tutorials/ssh-esse
 the systems:
 
   - **root@fnm**: the _fastnetmon_ host, address 172.22.89.2
-  - **rnd@fodhost**: the database server, address 10.33.0.97
+  - **rnd@fodhost**: the database server, address 172.22.89.4
   - **rnd@exabgp**: one of two exabgp hosts, address 172.22.89.21
 
 You may add the following snippet to your ``~/.ssh/config``, and add the hosts to
@@ -24,7 +24,7 @@ your ``/etc/hosts`` as well.
 	ServerAliveCountMax  3
 	UseRoaming no
 
-	Host    10.33.0.97  fodhost
+	Host    172.22.89.4  fodhost
 	User    rnd
 	TCPKeepAlive        yes
 	ServerAliveInterval 15
