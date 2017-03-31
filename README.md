@@ -1,26 +1,22 @@
 
 # DeiC Distributed Denial of Service Attack Prevention System, DDPS
 
-DDPS is _DeiC Distributed Denial of Service Attack_ build for the Danish
-research network. The [full vision statement is available here](docs/vision.md).
+DDPS stands for _DeiC Distributed Denial of Service Attack_ and it has been built for the Danish
+research network, DeIC. The [full vision statement is available here](docs/vision.md).
 
-DDPS is an automated system for DDoS mitigation where educational customers may
-add mitigation rules which triggers in the future, view archived rules and see
-statistical information.
+DDPS is conceived as an automated system for DDoS mitigation: detected attacks automatically create mitigation rules. Additionaly, end-users may add, edit, or cancel mitigation rules as well as view archived rules and statistical information.
 
 The project is hosted on github.com and split in a number of sub-projects. This is
 the documentation hub.
 
 ## Short technology overview
 
-DDoS mitigation based on BGP flowspec requires some rules to _enter_ the
+DDoS mitigation based on BGP Flowspec requires some rules to _enter_ the
 system, and other rules to be _sent to and enforced by peering partners and
 upstream provider_. The drawing illustrates the different components: to the
-left is a customer site where fastnetmon monitor traffic to a group of networks
-and log traffic statistics to a local influx database.       
-When an attack is detected a set of mitigation rules are generated and sent to
-DDPS via an encrypted channel. The rules are added to an database and announced
-as flow spec rules and sent upstream and to edge . The rules are enforced on
+left is a customer site where the detection engine (using fastnetmon) monitors traffic to a group of networks
+and logs traffic statistics to a local influx database.       
+When an attack is detected, a set of mitigation rules are generated and sent to DDPS via an encrypted channel. The rules are added to an database and announced as flowspec rules in the BGP session. This means that they are both sent to upstream networks and disseminated accross the network to edge routers. The rules are enforced on
 edge on the routers thereby mitigating the attack. Rules are later withdrawn.
 
 ![](docs/assets/img/workflow.png)
@@ -29,8 +25,8 @@ edge on the routers thereby mitigating the attack. Rules are later withdrawn.
 	the image is made in Draw.io (chrome app), the src is in media/docs/workflow.xml
 -->
 
-The rules has to match the BGP community we are responsible for: it has to match
-our network only. The system has been designed to be do that from the entrance point
+The rules have to match the BGP community we are responsible for: they have to match
+our network only. The system has been designed to do that from the entrance point
 to the exit point: customers can only make rules for their own network which is
 a subset of ours, and the system can only send rules upstream which matches our
 network as such.
