@@ -4,7 +4,7 @@
 DDPS stands for _DeiC Distributed Denial of Service Attack_ and it has been built for the Danish
 research network, DeIC. The [full vision statement is available here](docs/vision.md).
 
-DDPS is conceived as an automated system for DDoS mitigation: detected attacks automatically create mitigation rules. Additionaly, end-users may add, edit, or cancel mitigation rules as well as view archived rules and statistical information.
+DDPS is conceived as an automated system for DDoS mitigation: detected attacks automatically trigger mitigatio. The mitigation is based on the creation of rules which can filter out the unwanted traffic (see below). Additionaly, end-users may add, edit, or cancel mitigation rules as well as view archived rules and statistical information.
 
 The project is hosted on github.com and split in a number of sub-projects. This is
 the documentation hub.
