@@ -1,19 +1,19 @@
 
 # DeiC Distributed Denial of Service Attack Prevention System, DDPS
 
-DDPS stands for _DeiC Distributed Denial of Service Attack_ and it has been built for the Danish
+DDPS stands for _DeiC DDoS Protection Service_ and it has been built for the Danish
 research network, DeIC. The [full vision statement is available here](docs/vision.md).
 
-DDPS is conceived as an automated system for DDoS mitigation: detected attacks automatically trigger mitigatio. The mitigation is based on the creation of rules which can filter out the unwanted traffic (see below). Additionaly, end-users may add, edit, or cancel mitigation rules as well as view archived rules and statistical information.
+DDPS is conceived as an automated system for DDoS mitigation: detected attacks automatically trigger mitigation. The mitigation is based on the creation of rules by a detection engine which can filter out unwanted traffic (see below). Additionaly, end-users may add, edit, or cancel mitigation rules as well as view archived rules and statistical information. Based on BGP Flowspec, it is intended to be used in a system where detection is placed as close as possible to the target and mitigation is placed as close as possible to the source(s) of the attack in order to limit in particular the impact of volumetric attacks.
 
 The project is hosted on github.com and split in a number of sub-projects. This is
 the documentation hub.
 
 ## Short technology overview
 
-DDoS mitigation based on BGP Flowspec requires some rules to _enter_ the
-system, and other rules to be _sent to and enforced by peering partners and
-upstream provider_. The drawing illustrates the different components: to the
+A DDoS mitigation system based on BGP Flowspec requires that some rules to _enter_ the
+system, and that other rules are _sent to and enforced by peering partners and
+upstream providers_. The drawing illustrates the different components: to the
 left is a customer site where the detection engine (using fastnetmon) monitors traffic to a group of networks
 and logs traffic statistics to a local influx database.       
 When an attack is detected, a set of mitigation rules are generated and sent to DDPS via an encrypted channel. The rules are added to an database and announced as flowspec rules in the BGP session. This means that they are both sent to upstream networks and disseminated accross the network to edge routers. The rules are enforced on
