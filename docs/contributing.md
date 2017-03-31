@@ -1,7 +1,7 @@
 
-# (!!STUBFILE!!) Contributing to DDPS
+Contributing to DDPS
 
-So you want to contribute to DDPS? Fantastic! Here's a brief overview on how
+Thanks for your interest in contribute to DDPS. Here's a brief overview on how
 best to do so.
 
 ## Support request?

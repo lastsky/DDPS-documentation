@@ -53,9 +53,11 @@ announce and withdraw rules and inserts them in two
 [exabgp](https://github.com/Exa-Networks/exabgp) instances from where they are
 sent to our edge routeres, peers and upstream provider.
 
-## Contributing
+## Contact and Contributing
 
-If you would like help implementing DDPS then please have a look at the [contributing](docs/contributing.md) page.
+If you would like help implementing DDPS then please have a look at the
+[contributing](docs/contributing.md) page. If you would like to contact
+the team behind DDPS then send an email to [ddps@deic.dk](mailto:ddps@deic.dk)
 
 ## Find out more
 
