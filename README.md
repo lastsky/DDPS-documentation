@@ -9,7 +9,7 @@
 
 DDPS stands for _DeiC DDoS Protection Service_ and it has been built for the Danish
 research network, DeIC. The [full vision statement is available as part of
-[the original project proposal (danish](DDoS_Detection_and_Mitigation_Service_MB.md)
+[the original project proposal (in danish)](docs/DDoS_Detection_and_Mitigation_Service_MB.md)
 
 DDPS is conceived as an automated system for DDoS mitigation: detected attacks
 automatically trigger mitigation. The mitigation is based on the creation of
