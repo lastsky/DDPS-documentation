@@ -81,7 +81,6 @@ the team behind DDPS then send an email to [ddps@deic.dk](mailto:ddps@deic.dk)
   - [Project Proposal for version 1.0 / what does DDPS solve and with what limitations](docs/DDoS_Detection_and_Mitigation_Service_MB.md) (in Danish only)
   - [Technical Design for version 1.0](docs/DDPS-technical-documentation.md)
   - TODO: [System Documentation](docs/stubfile.md)
-  - TODO: [Link to the other github projects with actual code](docs/stubfile.md)
   - TODO: [Todo / Road map](docs/stubfile.md)
   - [Status](docs/status-notes.md) for version 1.0
   - TODO: [FAQ](docs/stubfile.md)
