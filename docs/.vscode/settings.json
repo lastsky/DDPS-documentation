@@ -1,0 +1,30 @@
+/*
+From https://code.visualstudio.com/Docs/customization/userandworkspace
+VS Code provides two different scopes for settings:
+  - User these settings apply globally to any instance of VS Code you open
+  - Workspace these settings are stored inside your workspace in a .vscode
+	folder and only apply when the workspace is opened. Settings defined on
+	this scope override the user scope.
+  - but I still prefer vi / vim | NTHA
+*/
+
+{
+    "markdown.styles": [
+	"file:///usr/local/etc/i2-Book-number.css"
+]
+	"editor.wordWrap": off,
+	"files.exclude": {
+		"**/.vscode":   true
+		"**/.obsolite":   true
+		"**/.version":   true
+		"**/.source_info":   true
+		"**/*.log":   true
+		"**/*.tgz":   true
+		"**/*.o":   true
+		"**/._*":   true
+		"**/db2dps": true
+		"**/*.bak": true
+		"**/*.o": { "when": "$(basename)"}
+		"**/*.o": { "when": "$(basename)"}
+	}
+}
