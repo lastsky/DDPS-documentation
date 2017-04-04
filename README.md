@@ -74,7 +74,7 @@ sent to our edge routers, peers and upstream provider.
 
 If you would like help implementing DDPS then please have a look at the
 [contributing](docs/contributing.md) page. If you would like to contact
-the team behind DDPS then send an email to [ddps@deic.dk](mailto:ddps@deic.dk)
+the team behind DDPS then send an email to [ddps-info@deic.dk](mailto:ddps-info@deic.dk)
 
 ## Find out more
 
