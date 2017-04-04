@@ -85,7 +85,7 @@ the team behind DDPS then send an email to [ddps-info@deic.dk](mailto:ddps-info@
   - [Status](docs/status-notes.md) for version 1.0
   - TODO: [FAQ](docs/stubfile.md)
   - TODO: [Known issues](docs/stubfile.md)
-  - How to get support / Contact information: please write to [ddps@deic.dk](mailto:ddps@deic.dk)
+  - How to get support / Contact information: please write to [ddps-info@deic.dk](mailto:ddps-info@deic.dk)
 
 ## License
 
