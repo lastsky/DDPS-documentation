@@ -1,5 +1,5 @@
 
-Contributing to DDPS
+# Contributing to DDPS
 
 Thanks for your interest in contribute to DDPS. Here's a brief overview on how
 best to do so.
@@ -30,12 +30,11 @@ open and closed issues first.
 
 ## Style
 
-* Two spaces, not tabs
-* Trailing newline at end of source files
-* No editor-specific cruft in source code or `.gitignore`
-* Code should follow our accepted style guides (coming soon)
-
 Look at existing code to get a good feel for the patterns we use.
+
+  * please use tabs not space
+  * No editor-specific cruft in source code or `.gitignore`
+
 
 ## Using Git appropriately
 
