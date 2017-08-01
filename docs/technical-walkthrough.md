@@ -100,7 +100,7 @@ Rule file format:
        version:     | 1 ...
        attack_info: | icmp_flood | syn_flood | udp_flood | unknown | ...
 
-       Rules: customernetworkid,uuid,fastnetmoninstanceid,administratorid,blocktime,1,2,3,4,5,6,7,8,9,10,11,12
+       Rules: customernetworkid,uuid,fastnetmoninstanceid,administratorid,blocktime,1,2,3,4,5,6,7,8,9,10,11,12,action,description
        customernetworkid:      Customer id (int)
        uuid:                   Mac address -- identify fastnetmon instance
        fastnetmoninstanceid:   Customers fastnetmon # (int)
@@ -118,6 +118,8 @@ Rule file format:
        Type 10 - Packet length
        Type 11 – DSCP
        Type 12 - Fragment Encoding
+       action:              discard or rate-limit 9600
+       description:         comment / rule description
        last-line
 
 E.g.

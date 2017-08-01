@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Status</title>
+	<meta name="subtitle" content="Status"/>
+	<meta name="author" content="Niels Thomas Haugård"/>
+	<meta name="date" content="Tor 27 Jul 2017 22:47:48 CEST"/>
+	<meta name="version" content="1.0-2-1-g5284797-dirty"/>
+	<meta name="shorttitle" content="D"/>
+	<meta name="series" content="SSI"/>
+	<meta name="seriesindex" content=""/>
+	<meta name="tags" content="SSI"/>
+	<meta name="cover" content="coverpage.pdf"/>
+	<link type="text/css" rel="stylesheet" href="assets/CSS/github.css"/>
+<link rel="stylesheet" href="assets/CSS/googlecode.css"> <script src="assets/CSS/highlight.min.js"></script> <script>hljs.initHighlightingOnLoad();</script>
+	<meta name="files" content=""/>
+</head>
+<body>
+
+<h1 id="meeting07-27">Meeting 07&#8211;27</h1>
+
+<h2 id="questionsbytangui:">Questions by Tangui:</h2>
+
+<ol>
+<li><p>how to give temporary access to Anders (and maybe others) to the database in
+ order to add or expire flowspec rules. Niels Thomas has an idea. As soon as
+ Ash is back, we will of course focus on giving access to the GUI (which
+ should be hosted at the right place);</p></li>
+<li><p>How to monitor the different components, starting with seeing if they are
+ alive (2.1) as we didn&#8217;t know one of the ExaBGP instance was down and (2.2)
+ if announced rules are actually activated in the routers (Niels Thomas
+ suggested having a script creating dummy rules for this purpose);</p></li>
+<li><p>Issues with the ISO images Niels Thomas is working on to deploy new
+ FastNetMon instances (with the right IP address + OpenVPN config).</p></li>
+</ol>
+
+<h2 id="answers:">Answers:</h2>
+
+<ol>
+<li>SSH host access has been granted permanently to both Anders, Ashokaditya,
+ Kasper Nice, Tangui and Thomas as your preferred initials. Please add your
+ public keys e.g. by using the shared login or by sending the public RSA or
+ ed25519 key to me. Your account is locked, you cannot use a password with
+ it. Also your account has full rights for everything with <code>sudo</code>. (Still
+ you break it, you own it).</li>
+</ol>
+
+<p>Direct postgres database editing is error prone. Still we all have direct
+ access with a variety of tools including command line.<br/>
+ I came up with this command for adding ad-hoc rules, removing rules (set
+ expire time to now) and print rules, and think this is better than direct
+ database editing:</p>
+
+<pre><code>    /opt/db2dps/bin/ddpsrules [-V | -h] [add | del | print]
+</code></pre>
+
+<p>Check rules has been enforced with</p>
+
+<pre><code>    sudo sed '/rule:.*match/!d' /var/log/syslog
+</code></pre>
+
+<p>When deleting rules the <em>flowspecruleid</em> has to be provided. Use the <em>print</em>
+ argument to find it.</p>
+
+<ol>
+<li><p>Anders and Thomas has decided that monitoring should be done by the RND team,
+ and they have free hands to find the best solution.</p></li>
+<li><p>A work around for setting the keyboard permanently has been found. Pavel
+ Odintsov is working on adding <em>FastNetMon</em> to the Debian package tree, which
+ will hopefully make the installation of FastNetMon and the Intel 10Gb drivers
+ a breeze compared to now. Still we need a solution for now and I&#8217;m working
+ creating ISO images for unattended installation. Please see <code>/opt/mkiso</code> on
+ the DDPS host.<br/>
+ A few solved problems:</p></li>
+<li><p>How to ensure an OpenVPN client always gets the same IP address</p></li>
+<li><p>How to setup OpenVPN in such a way that hosts behind the VPN gateway
+ can access services on the client</p></li>
+</ol>
+
+<p>I will create one ISO with different versions of FastNetMon and the drivers
+ and let the installation procedure decide which version (package) to install
+ depending on the hardware.</p>
+
+<p>Once that has been done, it will be time to migrate the ddps host to a new
+ environment with direct access for developers as now, but protected by a
+ firewall / VPN cluster, have the database redundant and a new set of exabgp
+ hosts installed as well. I have informed Frank of the plan, but there is
+ no blue print yet.</p>
+
+</body>
+</html>

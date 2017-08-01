@@ -13,6 +13,7 @@ author	= Niels Thomas Haugård
 
 # Default css: black text, blue headers, automatic numbering
 css		= assets/CSS/nth2-number.css
+css		= assets/CSS/github.css
 
 # Syntax highlighting - see https://highlightjs.org
 html_header = <link rel=\"stylesheet\" href=\"assets/CSS/default.min.css\"> <script src=\"assets/CSS/highlight.min.js\"></script> <script>hljs.initHighlightingOnLoad();</script>
