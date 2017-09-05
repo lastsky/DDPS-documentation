@@ -21,6 +21,7 @@ the documentation hub. Links to the sub-projects are:
 
   - [DDPS fastnetmon installation and configuration](https://github.com/deic-dk/DDPS-fastnetmon)
   - [DDPS database daemon](https://github.com/deic-dk/DDPS-db2dps)
+  - [DDPS API](https://github.com/deic-dk/ddps-node)
   - [DDPS web-user interface](https://github.com/deic-dk/gossamer)
   - [DDPS Customer Site Simulation](https://github.com/deic-dk/DDPS-customer)
   - [DDPS DDoS simulator](https://github.com/deic-dk/DDPS-attacker)
