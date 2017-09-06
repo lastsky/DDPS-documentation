@@ -5,8 +5,8 @@ DDPS stands for _DeiC DDoS Protection Service_ and it has been built for the Dan
 research network, DeIC. The full vision statement is available as part of
 [the original project proposal (in danish)](docs/DDoS_Detection_and_Mitigation_Service_MB.md)
 
-DDPS is conceived as an automated system for DDoS mitigation: detected attacks
-and automatically trigger mitigation.        
+DDPS is conceived as an automated system for DDoS mitigation: it detects attacks
+and automatically triggers mitigation.        
 The mitigation is based on the creation of rules by a detection engine which
 can filter out unwanted traffic (see below).         
 Additionally, end-users may _add_, _edit_, or _cancel_ mitigation rules as well as
@@ -28,7 +28,7 @@ the documentation hub. Links to the sub-projects are:
 
 ## Short technology overview
 
-A DDoS mitigation system based on BGP Flowspec requires that some rules to
+A DDoS mitigation system based on BGP Flowspec requires that some rules 
 _enter_ the system, and that other rules are _sent to and enforced by peering
 partners and upstream providers_. The drawing illustrates the different
 components: to the left is a customer site where the detection engine (using
